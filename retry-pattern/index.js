@@ -24,9 +24,9 @@ const externalService = async (retryAttempt) => {
 };
 
 const sleep = async (milliSeconds) =>
-  new Promise((resole) => {
+  new Promise((resolve) => {
     setTimeout(() => {
-      resole();
+      resolve();
     }, milliSeconds);
   });
 

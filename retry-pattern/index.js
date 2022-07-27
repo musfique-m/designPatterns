@@ -9,8 +9,8 @@ const retryOperation = async () => {
       console.log(`❌ Attempt 🔨 #${retryAttempt} failed 💀:${error}`);
       if (retryAttempt === 10)
         console.log(`🛑🚧⛔🚫 Maximum retry attempt reached 🚨🙅`);
+      else await sleep(250);
       retryAttempt++;
-      await sleep(250);
     }
   }
 };
@@ -18,7 +18,7 @@ const retryOperation = async () => {
 const externalService = async (retryAttempt) => {
   return await sleep(100).then(() => {
     const magicalNumber = Math.round(Math.random() * 10);
-    if (retryAttempt === magicalNumber) return "✔ great success! 💥🚀";
+    if (retryAttempt === magicalNumber) return "✔ Great success! 💥🚀";
     throw magicalNumber;
   });
 };

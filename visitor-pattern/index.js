@@ -1,5 +1,4 @@
-function Employee(name, salary) {
-  this.name = name;
+function Employee(salary) {
   this.salary = salary;
 }
 
@@ -15,7 +14,7 @@ Employee.prototype = {
   },
 };
 
-const newEmployee = new Employee("new", 10);
+const newEmployee = new Employee(10);
 console.log(newEmployee.getSalary());
 
 function IncrementSalary(employee) {
